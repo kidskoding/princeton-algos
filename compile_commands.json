@@ -1,0 +1,6 @@
+[
+{
+  "directory": "/Users/anirudh/UIUC/coursework/princeton_algorithms",
+  "arguments": ["/Library/Developer/CommandLineTools/usr/bin/clang", "-c", "-Qunused-arguments", "-isysroot", "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-Ibuild/.gens/algos/macosx/arm64/release/platform/windows/idl", "-DNDEBUG", "-o", "build/.objs/algos/macosx/arm64/release/src/main.cpp.o", "src/main.cpp"],
+  "file": "src/main.cpp"
+}]
