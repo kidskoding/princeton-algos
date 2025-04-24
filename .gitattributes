@@ -1,0 +1,6 @@
+# tell Linguist to ignore xmake.lua completely
+xmake.lua linguist-vendored
+# ignore any per-user override
+xmake.lua.user linguist-vendored
+# ignore XMake’s internal directory
+.xmake/** linguist-vendored
