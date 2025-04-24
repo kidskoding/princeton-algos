@@ -3,9 +3,11 @@
 WeightedQuickUnionUF::WeightedQuickUnionUF(int n) {
     this->count = n;
     id.resize(n);
+    sz.resize(n);
 
     for(int i = 0; i < n; i++) {
         id[i] = i;
+        sz[i] = i;
     }
 }
 
@@ -24,5 +26,15 @@ bool WeightedQuickUnionUF::connected(int p, int q) {
 void WeightedQuickUnionUF::merge(int p, int q) {
     int i = root(p);
     int j = root(q);
-    id[i] = j;
+    if(i == j) {
+        return;
+    }
+
+    if(sz[i] == sz[j]) {
+        id[i] = j;
+        sz[j] += sz[i];
+    } else {
+        id[j] = i;
+        sz[i] += sz[j];
+    }
 }

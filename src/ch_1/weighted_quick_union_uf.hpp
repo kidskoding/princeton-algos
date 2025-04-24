@@ -3,6 +3,7 @@
 class WeightedQuickUnionUF {
     private:
         std::vector<int> id;
+        std::vector<int> sz;
         int count;
 
         int root(int i);
