@@ -1,6 +1,6 @@
-#include "quick_union_uf.hpp"
+#include "weighted_quick_union_uf.hpp"
 
-QuickUnionUF::QuickUnionUF(int n) {
+WeightedQuickUnionUF::WeightedQuickUnionUF(int n) {
     this->count = n;
     id.resize(n);
 
@@ -9,18 +9,19 @@ QuickUnionUF::QuickUnionUF(int n) {
     }
 }
 
-int QuickUnionUF::root(int i) {
+int WeightedQuickUnionUF::root(int i) {
     while(i != id[i]) {
+        id[i] = id[id[i]];
         i = id[i];
     }
     return i;
 }
 
-bool QuickUnionUF::connected(int p, int q) {
+bool WeightedQuickUnionUF::connected(int p, int q) {
     return root(p) == root(q);
 }
 
-void QuickUnionUF::merge(int p, int q) {
+void WeightedQuickUnionUF::merge(int p, int q) {
     int i = root(p);
     int j = root(q);
     id[i] = j;
