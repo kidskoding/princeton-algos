@@ -1,4 +1,4 @@
-#include "weighted_quick_union_uf.hpp"
+#include "wqupc.hpp"
 
 WeightedQuickUnionUF::WeightedQuickUnionUF(int n) {
     this->count = n;
